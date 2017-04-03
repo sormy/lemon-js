@@ -1,3 +1,12 @@
+/**
+ * Primitive Lexer.
+ *
+ * This is single-state primitive lexer which will try to test each added rule
+ * one by one. First matched rulle will be used to get token text.
+ *
+ * It could be used only for primitive grammars but also could be a good starting
+ * point for writing your own lexer.
+ */
 function Lexer() {
   this.index = 0;
   this.rules = [];

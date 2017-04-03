@@ -1,12 +1,32 @@
 # LEMON.JS - LALR(1) Parser Generator for JavaScript
 
-Lemon.JS is an LALR(1) parser generator for JavaScript based on Lemon parser generator for C.
+Lemon.JS is an LALR(1) parser generator for JavaScript based on Lemon parser generator for C included in SQLite package distribution.
 
 ## Parser Code Base
 
 Files `lemon.c`, `lempar.c`, `lemon.html` are extracted from SQLite v3.17.0. Original parser generator code is slightly fixed to produce JavaScript compatible statements. Parser template translated from C to JavaScript. Source comments mostly not touched to keep it easy diff against original file.
 
 Both original C version and patched JS version are included for side by side comparison for reference.
+
+## Installation
+
+Compile lenon-js.c with any C compiler and place in anywhere with lempar.js side by side.
+
+## Compilation
+
+Prerequisites: C compiler, for example GCC.
+
+```bash
+gcc -o lemon-js -O2 lemon-js.c
+```
+
+## Usage
+
+```bash
+lemon-js <filename>.y
+```
+
+See http://www.hwaci.com/sw/lemon/lemon.html for more details.
 
 ## Special Directives
 
